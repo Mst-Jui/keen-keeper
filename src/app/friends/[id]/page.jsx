@@ -1,15 +1,23 @@
 "use client"
 import Friend from '@/components/friend/Friend';
+import { FriendContext } from '@/context/FriendContext';
 import useFriends from '@/hooks/useFriends';
 import Image from 'next/image';
 import { useParams } from 'next/navigation';
-import React from 'react';
+import React, { useContext } from 'react';
 import { BiArchive, BiBellOff, BiMessageSquare, BiPhone, BiVideo } from 'react-icons/bi';
 import { BsTrash2 } from 'react-icons/bs';
 import { FiEdit2 } from 'react-icons/fi';
+import { useRouter } from 'next/navigation';
 
 
 const FriendDetailsPage = () => {
+  const { selectedFriend, setCheckInAction, addTimelineEntry } = useContext(FriendContext);
+  const router = useRouter();
+
+
+
+
   const { id } = useParams();
   const { friends, loading } = useFriends();
   const friend = friends?.find((f) => String(f.id) === id);
@@ -17,6 +25,23 @@ const FriendDetailsPage = () => {
   if (loading) return <div className='text-center'><span className="loading loading-spinner text-success"></span></div>
   if (!Friend) return <p className='text-2xl'>Friend not found</p>
 
+
+
+ const handleAction = (type) => {
+    
+    const newAction = {
+      id: Date.now(), 
+      type: type,    
+      friendName: friend.name,
+      date: new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })
+    };
+
+    
+    addTimelineEntry(newAction);
+
+    
+    
+  };
   return (
     <div className="p-4 md:p-8 bg-[#f9fafb] min-h-screen font-sans">
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8">
@@ -114,16 +139,19 @@ const FriendDetailsPage = () => {
             <h3 className="text-lg font-bold text-[#2d4a43]  mb-8">Quick Check-In</h3>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <button
+                onClick={() => handleAction('Call')}
                 className="group flex flex-col items-center justify-center p-8 bg-[#f8fafc] rounded-2xl hover:bg-white hover:shadow-md border border-transparent hover:border-gray-100 transition-all duration-300">
                 <BiPhone size={28} className="text-slate-700 group-hover:scale-110 transition-transform" />
                 <span className="mt-3 text-gray-600 font-semibold">Call</span>
               </button>
               <button
+                onClick={() => handleAction('Text')}
                 className="group flex flex-col items-center justify-center p-8 bg-[#f8fafc] rounded-2xl hover:bg-white hover:shadow-md border border-transparent hover:border-gray-100 transition-all duration-300">
                 <BiMessageSquare size={28} className="text-slate-700 group-hover:scale-110 transition-transform" />
                 <span className="mt-3 text-gray-600 font-semibold">Text</span>
               </button>
               <button
+                onClick={() => handleAction('Video')}
                 className="group flex flex-col items-center justify-center p-8 bg-[#f8fafc] rounded-2xl hover:bg-white hover:shadow-md border border-transparent hover:border-gray-100 transition-all duration-300">
                 <BiVideo size={28} className="text-slate-700 group-hover:scale-110 transition-transform" />
                 <span className="mt-3 text-gray-600 font-semibold">Video</span>
@@ -137,5 +165,6 @@ const FriendDetailsPage = () => {
   );
 
 };
+
 
 export default FriendDetailsPage;
