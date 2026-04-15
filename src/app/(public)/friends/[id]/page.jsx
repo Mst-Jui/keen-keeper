@@ -9,6 +9,7 @@ import { BiArchive, BiBellOff, BiMessageSquare, BiPhone, BiVideo } from 'react-i
 import { BsTrash2 } from 'react-icons/bs';
 import { FiEdit2 } from 'react-icons/fi';
 import { useRouter } from 'next/navigation';
+import { toast } from 'react-toastify';
 
 
 const FriendDetailsPage = () => {
@@ -27,19 +28,15 @@ const FriendDetailsPage = () => {
 
 
 
- const handleAction = (type) => {
-    
+ const handleAction = (type) => { 
     const newAction = {
       id: Date.now(), 
       type: type,    
       friendName: friend.name,
       date: new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })
     };
-
-    
+    toast.success(`Great! You connected with ${friend.name}`)
     addTimelineEntry(newAction);
-
-    
     
   };
   return (
