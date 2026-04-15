@@ -6,7 +6,7 @@ const FriendProvider = ({ children }) => {
   const [selectedFriend, setSelectedFriend] = useState([]);
   const [checkInAction, setCheckInAction] = useState([]);
   const addTimelineEntry = (newEntry) => {
-  setCheckInAction((prev) => [newEntry, ...prev]); // নতুনটা সবার উপরে থাকবে
+  setCheckInAction((prev) => [newEntry, ...prev]); 
 };
   const data = {
     selectedFriend,
