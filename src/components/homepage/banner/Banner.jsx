@@ -11,7 +11,7 @@ const Banner = () => {
   const needAttention = friends.filter(f => f.status === "overdue").length;
 
   // example: interactions 
-  const interactions = friends.reduce((acc, f) => acc + (f.interactions || 0), 0);
+  // const interactions = friends.reduce((acc, f) => acc + (f.interactions || 0), 0);
   return (
     <div className='text-center container mx-auto max-w-7xl space-y-3 mt-20 mb-10'>
       <h2 className='font-bold text-5xl text-gray-700'>Friends to keep close in your life</h2>
@@ -44,7 +44,7 @@ const Banner = () => {
         {/* card-4  */}
         <div className='text-center space-y-2 border border-gray-200 shadow py-6 px-5 rounded-md'>
           <h2 className='font-semibold text-3xl text-green-900'>
-            {interactions}
+            12
           </h2>
           <p className='text-gray-400'>Interactions This Month</p>
         </div>

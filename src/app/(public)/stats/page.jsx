@@ -40,7 +40,7 @@ const StatsPage = () => {
           totalValue === 0 ?
             (
               <div className="flex flex-col items-center justify-center py-20 text-gray-400">
-                {/* এখানে আপনি চাইলে একটি আইকনও যোগ করতে পারেন */}
+                
                 <p className="text-lg font-medium italic">No interactions logged yet.</p>
               </div>
             )
