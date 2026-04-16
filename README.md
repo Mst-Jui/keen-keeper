@@ -19,6 +19,5 @@ The project focuses on performance, scalability, and a smooth user experience us
 
 ## ✨ Key Features
 🔹 Dynamic Routing with Next.js — Navigate to individual friend detail pages using dynamic routes  
-🔹 Interaction Tracking System — Log Call, Text, and Video interactions with toast notifications and timeline updates  
-🔹 Dynamic Analytics Chart — Visualize Call, Text, and Video interaction data dynamically using charts    
+🔹 Interaction Tracking System — Log Call, Text, and Video interactions with toast notifications and timeline updates     
 🔹 Responsive & Optimized UI — Fully responsive design with loading states, 404 page, and smooth user experience  
