@@ -2,7 +2,7 @@
 const nextConfig = {
   /* config options here */
   images: {
-    domains: ["randomuser.me"],
+    domains: ["i.ibb.co"],
   },
 };
 

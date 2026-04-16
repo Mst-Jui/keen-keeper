@@ -1,22 +1,56 @@
 "use client"
 import { FriendContext } from '@/context/FriendContext';
-import React, { useContext, useState } from 'react'; 
+import React, { useContext, useState } from 'react';
 import { FaVideo } from 'react-icons/fa6';
 import { IoIosArrowDown, IoIosCall, IoMdText } from 'react-icons/io';
 
 const TimeLinePage = () => {
   const { checkInAction } = useContext(FriendContext);
-  
-  
+  const [searchTerm, setSearchTerm] = useState("");
+
+
   const [filter, setFilter] = useState(null);
-  const filteredActions = filter 
-    ? checkInAction.filter(action => action.type === filter) 
-    : checkInAction;
+  const filteredActions = (filter
+    ? checkInAction.filter(action => action.type === filter)
+    : checkInAction
+  ).filter(action =>
+    action.friendName.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    action.type.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   return (
     <div className='overflow-x-hidden'>
       <div className='container mx-auto max-w-5xl space-y-4 my-8 px-4 md:px-6'>
-        <h2 className='font-bold text-3xl md:text-5xl text-gray-700'>Timeline</h2>
+        <div className='flex flex-col md:flex-row md:items-center justify-between gap-4 p-4'>
+          <h2 className='font-bold text-3xl md:text-5xl text-gray-700'>Timeline</h2>
+
+
+          {/* search  */}
+          <label className="input">
+            <svg className="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <g
+                strokeLinejoin="round"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+                fill="none"
+                stroke="currentColor"
+              >
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.3-4.3"></path>
+              </g>
+            </svg>
+            <input
+              type="search"
+              required
+              placeholder="Search"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
+          </label>
+          {/* end search  */}
+        </div>
+
+
 
         {/* Dropdown Filter */}
         <details className="dropdown">
@@ -24,7 +58,7 @@ const TimeLinePage = () => {
             {filter ? `Showing: ${filter}` : "Filter timeline"} <IoIosArrowDown />
           </summary>
           <ul className="menu dropdown-content bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm border border-gray-100">
-           
+
             <li><a onClick={() => setFilter(null)}>All Activity</a></li>
             <hr className="my-1 border-gray-100" />
             <li><a onClick={() => setFilter('Text')}>Text</a></li>

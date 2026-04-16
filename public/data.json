@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Arif Rahman",
-    "picture": "https://randomuser.me/api/portraits/men/11.jpg",
+    "picture": "https://i.ibb.co/DH8nzr64/Ellipse-4.png",
     "email": "arif.rahman@example.com",
     "days_since_contact": 18,
     "status": "overdue",
@@ -17,7 +17,7 @@
   {
     "id": 2,
     "name": "Nusrat Jahan",
-    "picture": "https://randomuser.me/api/portraits/women/22.jpg",
+    "picture": "https://i.ibb.co/XZWks89t/Ellipse-1.png",
     "email": "nusrat.jahan@example.com",
     "days_since_contact": 9,
     "status": "almost due",
@@ -32,7 +32,7 @@
   {
     "id": 3,
     "name": "Tanvir Hasan",
-    "picture": "https://randomuser.me/api/portraits/men/32.jpg",
+    "picture": "https://i.ibb.co/KpRWyhRB/Ellipse-5.png",
     "email": "tanvir.hasan@example.com",
     "days_since_contact": 3,
     "status": "on-track",
@@ -46,7 +46,7 @@
   {
     "id": 4,
     "name": "Sadia Akter",
-    "picture": "https://randomuser.me/api/portraits/women/45.jpg",
+    "picture": "https://i.ibb.co/m55dxzn0/Ellipse-2.png",
     "email": "sadia.akter@example.com",
     "days_since_contact": 14,
     "status": "almost due",
@@ -60,7 +60,7 @@
   {
     "id": 5,
     "name": "Mahfuz Alam",
-    "picture": "https://randomuser.me/api/portraits/men/51.jpg",
+    "picture": "https://i.ibb.co/DPPJH8XB/Ellipse-6.png",
     "email": "mahfuz.alam@example.com",
     "days_since_contact": 25,
     "status": "overdue",
@@ -75,7 +75,7 @@
   {
     "id": 6,
     "name": "Rafiq Islam",
-    "picture": "https://randomuser.me/api/portraits/men/61.jpg",
+    "picture": "https://i.ibb.co/hQh7Wf0/Ellipse-7.png",
     "email": "rafiq.islam@example.com",
     "days_since_contact": 6,
     "status": "on-track",
@@ -90,7 +90,7 @@
   {
     "id": 7,
     "name": "Mitu Saha",
-    "picture": "https://randomuser.me/api/portraits/women/68.jpg",
+    "picture": "https://i.ibb.co/M5yzKhW3/Ellipse-3.png",
     "email": "mitu.saha@example.com",
     "days_since_contact": 11,
     "status": "almost due",
@@ -104,7 +104,7 @@
   {
     "id": 8,
     "name": "Shakil Ahmed",
-    "picture": "https://randomuser.me/api/portraits/men/75.jpg",
+    "picture": "https://i.ibb.co/1tCdsZ1V/Ellipse-8.png",
     "email": "shakil.ahmed@example.com",
     "days_since_contact": 2,
     "status": "on-track",
