@@ -21,6 +21,10 @@ https://keen-keeper-ecru-two.vercel.app
 
 
 ## ✨ Key Features
-🔹 Dynamic Routing with Next.js — Navigate to individual friend detail pages using dynamic routes  
-🔹 Interaction Tracking System — Log Call, Text, and Video interactions with toast notifications and timeline updates     
-🔹 Responsive & Optimized UI — Fully responsive design with loading states, 404 page, and smooth user experience  
+🔹 Friend Management – View and manage friend profiles in a clean and organized interface.  
+🔹Interaction Tracking System – Log and monitor calls, texts, and video chats with friends.  
+🔹 Activity Timeline – Track communication history through a structured timeline view.  
+🔹Analytics Dashboard – Visualize friendship and interaction data with insightful charts and statistics.  
+🔹Smart Search – Quickly search and find friends from the directory.  
+🔹Fully Responsive Design – Optimized for a smooth experience across all screen sizes.  
+  
