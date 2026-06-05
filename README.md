@@ -6,6 +6,14 @@ KeenKeeper is a modern and fully responsive web application built with Next.js t
 
 The project focuses on performance, scalability, and a smooth user experience using Next.js features like routing, loading UI, and component-based architecture.
 
+![Dashboard](https://i.ibb.co/7dWPsWm2/Dashboard.png)
+
+![Friend Details](https://i.ibb.co/21zxQLhV/Friend-Details.png)
+
+![Timeline](https://i.ibb.co/G4y2BBbM/Timeline.png)
+
+![Stats](https://i.ibb.co/j92PtZ5P/Stats.png)
+
 Live Website:  
 https://keen-keeper-ecru-two.vercel.app
 ---
